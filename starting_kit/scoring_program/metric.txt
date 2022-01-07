@@ -1,1 +1,1 @@
-accuracy_score
+f1_score
