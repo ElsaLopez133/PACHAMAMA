@@ -2,30 +2,32 @@
 <h1>Evaluation</h1>
 
 <p>
-The problem is a multiclass classification problem. Each sample (an Iris) is characterized by its sepal and petal
-width and length (4 features). You must predict the Iris categories: setosa, virginica, or versicolor.
+The problem is a multiclass classification problem. Each sample is an image of 128x128. You must predict the species of the living being present on the images.
 <br>
-You are given for training a data matrix X_train of dimension num_training_samples x num_features 
-and an array y_train of labels of dimension num_training_samples. You must train a model
-which predicts the labels for two test matrices X_valid and X_test. 
+You are given for training a Dataset0 containing ----- images of dimension 128x128 and a csv file of the labels for every image.
+More info on the <b>Data</b> tab.
+You must developp a model to perform multiclass classification on this Dataset. 
+For phases 1 and 2, Dataset1 and Dataset2 will be used to evaluate your model but they are entirely private.
 
 <br>
-There are 2 phases:
+There are 3 phases:
 <ul>
-<li> <b>Phase 1: development phase. </b> We provide you with labeled training data and unlabeled validation and test data.
-Make predictions for both datasets. However, you will receive feed-back on your performance on the validation set only. 
-The performance of your LAST submission will be displayed on the leaderboard.
-<li> <b>Phase 2: final phase.</b> You do not need to do anything. Your last submission of phase 1 will be automatically forwarded.
-Your performance on the test set will appear on the leaderboard when the organizers finish checking the submissions. 
+<li> <b>Phase 0: public phase. </b> We provide you with Dataset0 containing labeled data.
+You will not be evaluated on this dataset, but it will be used to developp the model that you will then submit for other 2 phases.
+<li> <b>Phase 1: development phase. </b> This time you do not have access to any part of the Dataset1 which will be used to train and test on the model you submitted.
+The performance of your LAST submission on the test set will be displayed on the leaderboard.
+You will be allowed 5 submissions a day and 100 total.
+<li> <b>Phase 2: final phase.</b> This will follow the same procedure as phase 1 but with the Dataset2.
+And you will only have a single submissions to assess your final performance on the challenge.
+Your performance on the test set will appear on the leaderboard when the organizers finish checking the submissions ensuring there is no cheating involved. 
 </ul>
 
 This sample competition allows you to submit either:
 <ul>
-<li> Only prediction results (no code).
-<li> A pre-trained prediction model. 
-<li> A prediction model that must be trained and tested. 
+<li> A prediction model that must be trained and tested on the dataset of the phase 1/2. 
+<li> A pre-trained model that must be re-trained and tested on the dataset of the phase 1/2. 
 </ul>
 
-The submissions are evaluated using the <b>accuracy</b> metric.
+The submissions are evaluated using the <b>f1-score</b> metric.
 </p>
 
