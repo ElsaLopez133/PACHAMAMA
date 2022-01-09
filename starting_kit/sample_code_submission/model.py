@@ -10,6 +10,7 @@ import pickle
 import numpy as np   # We recommend to use numpy arrays
 from os.path import isfile
 from sklearn.base import BaseEstimator
+from sklearn.naive_bayes import GaussianNB
 
 class model (BaseEstimator):
     def __init__(self):
@@ -20,6 +21,7 @@ class model (BaseEstimator):
         self.num_train_samples=0
         self.num_feat=1
         self.num_labels=1
+        self.model=None
         self.is_trained=False
 
     def fit(self, X, y):
@@ -36,20 +38,30 @@ class model (BaseEstimator):
         Use data_converter.convert_to_num() to convert to the category number format.
         For regression, labels are continuous values.
         '''
+        (10 000, 128, 128, 3)
         self.num_train_samples = X.shape[0]
-        if X.ndim>1: self.num_feat = X.shape[1]
+        if X.ndim>3:
+            self.num_feat = X.shape[1]*X.shape[2]*X.shape[3]
+            if X.shape[1] == 3: X = np.swapaxes(X, 1, 3)
+        elif X.ndim>1:
+            self.num_feat = X.shape[1]
+            X = X.reshape(-1, 128, 128, 3)
         print("FIT: dim(X)= [{:d}, {:d}]".format(self.num_train_samples, self.num_feat))
         num_train_samples = y.shape[0]
         if y.ndim>1: self.num_labels = y.shape[1]
         print("FIT: dim(y)= [{:d}, {:d}]".format(num_train_samples, self.num_labels))
         if (self.num_train_samples != num_train_samples):
             print("ARRGH: number of samples in X and y do not match!")
+
+        # Training
+        self.model = GaussianNB()
+        self.model.fit(X, y)
+        
         self.is_trained=True
 
     def predict(self, X):
         '''
         This function should provide predictions of labels on (test) data.
-        Here we just return zeros...
         Make sure that the predicted values are in the correct format for the scoring
         metric. For example, binary classification problems often expect predictions
         in the form of a discriminant value (if the area under the ROC curve it the metric)
@@ -59,14 +71,20 @@ class model (BaseEstimator):
         The function predict eventually can return probabilities.
         '''
         num_test_samples = X.shape[0]
-        if X.ndim>1: num_feat = X.shape[1]
+        if X.ndim>3:
+            num_feat = X.shape[1]*X.shape[2]*X.shape[3]
+            if X.shape[1] == 3: X = np.swapaxes(X, 1, 3)
+        elif X.ndim>1:
+            num_feat = X.shape[1]
+            X = X.reshape(-1, 128, 128, 3)
         print("PREDICT: dim(X)= [{:d}, {:d}]".format(num_test_samples, num_feat))
         if (self.num_feat != num_feat):
             print("ARRGH: number of features in X does not match training data!")
         print("PREDICT: dim(y)= [{:d}, {:d}]".format(num_test_samples, self.num_labels))
-        y = np.zeros([num_test_samples, self.num_labels])
-        # If you uncomment the next line, you get pretty good results for the Iris data :-)
-        #y = np.round(X[:,3])
+
+        # Predict
+        y = self.model.predict(X)
+
         return y
 
     def save(self, path="./"):
