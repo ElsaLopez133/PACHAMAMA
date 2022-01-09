@@ -29,10 +29,10 @@ In this phase you can submit only once so it is advised to do it when you are re
 
 ### References and credits: 
 
-1. MUSÉUM NATIONAL D’HISTOIRE NATURELLE (https://www.mnhn.fr/)
-2. SPIPOLL (https://www.spipoll.org/)      
-3. Université Paris Saclay (https://www.universite-paris-saclay.fr/)
-4. ChaLearn (http://www.chalearn.org/)
+ 
+1. Automated  flower  classificationover  a  large  number  of  classes (https://www.robots.ox.ac.uk/~vgg/publications/2008/Nilsback08/nilsback08.pdf)       
+2. Université Paris Saclay (https://www.universite-paris-saclay.fr/)
+3. ChaLearn (http://www.chalearn.org/)
 
 
 ### Prerequisites:
