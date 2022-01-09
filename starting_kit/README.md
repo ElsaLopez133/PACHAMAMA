@@ -17,13 +17,17 @@ This challenge is about creating and predicting a Machine Learning model and tra
 
 
 ### Phases
-This challenge conists of two phases:  
+This challenge conists of three phases:  
 
-1. `Development Phase`
-In this phase you can train a model and submit at most 20 submissions per day to check the score of your model and to see how good your model is performing. Once you are satisfied with your performance then you can try the Final Phase.
-    
-2. `Final Phase`
-In this phase you can submit only once so it is advised to do it when you are ready for the final submission.
+1. `Phase 0`: 
+Public phase. We provide you with Dataset0 containing labeled data. You will not be evaluated on this dataset, but it will be used to developp the model that you will then submit for other 2 phases.
+
+1. `Phase 1`
+Development phase. This time you do not have access to any part of the Dataset1 which will be used to train and test on the model you submitted. The performance of your LAST submission on the test set will be displayed on the leaderboard.
+
+2. `Phase 2`
+Final phase. This will follow the same procedure as phase 1 but with the Dataset2. And you will only have a single submissions to assess your final performance on the challenge.
+Your performance on the test set will appear on the leaderboard when the organizers finish checking the submissions ensuring there is no cheating involved. 
     
     
 
