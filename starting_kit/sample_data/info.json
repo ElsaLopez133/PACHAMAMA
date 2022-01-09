@@ -1,6 +1,6 @@
 {
-    "dataset_name" : "flower_sample_data",
-    "dataset_description" : "flower sample dataset",
+    "dataset_name" : "flowers_sample_data",
+    "dataset_description" : "flowers sample dataset",
     "total_categories" : 102,
     "total_super_categorie" : 0,
     "uniform_number_of_images_per_category" : false, 
