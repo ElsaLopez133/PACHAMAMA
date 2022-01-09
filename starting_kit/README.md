@@ -1,4 +1,4 @@
-# Starting kit for Insects Classification Challenge
+# Starting kit for Living specises Classification Challenge
 
 
 This challenge uses a Dataset introduced by  Maria-Elena Nilsback and Andrew Zissermanfor un the paper **Automated  flower  classification  over  a  largenumber  of  classes**,  
