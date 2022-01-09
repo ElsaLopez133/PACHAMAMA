@@ -1,16 +1,19 @@
 # Starting kit for Insects Classification Challenge
 
-This challenge uses a Dataset from **MUSÉUM NATIONAL D’HISTOIRE NATURELLE**
-    
-The dataset coniststs of total 290,000 images and each image belongs to one of the following classes
 
-1. Bee
-2. Wasp
-3. Other insect
-4. Butterfly insect
+This challenge uses a Dataset introduced by  Maria-Elena Nilsback and Andrew Zissermanfor un the paper **Automated  flower  classification  over  a  largenumber  of  classes**,  
+ 
+ 
+The dataset coniststs of total of 8,189 images belonging to 102 classes that  are  commonly  occuring  in  the  United  Kingdom. Some of the classes are the following:
+
+1. Buttercup
+2. Fire lily
+3. Azalea
+4. Gaura
+5. Garzania
 
     
-This challenge is about creating and predicting a Machine Learning model and train it with the data provided to classify the images into the mentioned 5 categories. 
+This challenge is about creating and predicting a Machine Learning model and train it with the data provided to be able to identify and classify living species.
 
 
 ### Phases
