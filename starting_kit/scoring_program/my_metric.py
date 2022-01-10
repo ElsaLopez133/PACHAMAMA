@@ -6,9 +6,15 @@ than one function, hence you must specify the name of the function that is your 
 
 import numpy as np
 import scipy as sp
+from sklearn import metrics
 
 def mse_metric(solution, prediction):
     '''Mean-square error.
     Works even if the target matrix has more than one column'''
     mse = np.mean((solution-prediction)**2)
     return np.mean(mse)
+
+def f1_score(solution, prediction):
+    '''f-1 score'''
+    return metrics.f1_score(solution, prediction, average='weighted')
+

@@ -11,6 +11,7 @@ import numpy as np   # We recommend to use numpy arrays
 from os.path import isfile
 from sklearn.base import BaseEstimator
 from sklearn.naive_bayes import GaussianNB
+from sklearn.preprocessing import OneHotEncoder
 
 class model (BaseEstimator):
     def __init__(self):
@@ -38,14 +39,14 @@ class model (BaseEstimator):
         Use data_converter.convert_to_num() to convert to the category number format.
         For regression, labels are continuous values.
         '''
-        (10 000, 128, 128, 3)
         self.num_train_samples = X.shape[0]
         if X.ndim>3:
             self.num_feat = X.shape[1]*X.shape[2]*X.shape[3]
             if X.shape[1] == 3: X = np.swapaxes(X, 1, 3)
+            X = X.reshape(-1, 128*128*3)      # For 1D input models
         elif X.ndim>1:
             self.num_feat = X.shape[1]
-            X = X.reshape(-1, 128, 128, 3)
+            # X = X.reshape(-1, 128, 128, 3)    # For CNNs
         print("FIT: dim(X)= [{:d}, {:d}]".format(self.num_train_samples, self.num_feat))
         num_train_samples = y.shape[0]
         if y.ndim>1: self.num_labels = y.shape[1]
@@ -74,9 +75,10 @@ class model (BaseEstimator):
         if X.ndim>3:
             num_feat = X.shape[1]*X.shape[2]*X.shape[3]
             if X.shape[1] == 3: X = np.swapaxes(X, 1, 3)
+            X = X.reshape(-1, 128*128*3)        # For 1D input models
         elif X.ndim>1:
             num_feat = X.shape[1]
-            X = X.reshape(-1, 128, 128, 3)
+            # X = X.reshape(-1, 128, 128, 3)    # For CNNs
         print("PREDICT: dim(X)= [{:d}, {:d}]".format(num_test_samples, num_feat))
         if (self.num_feat != num_feat):
             print("ARRGH: number of features in X does not match training data!")
