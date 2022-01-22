@@ -29,7 +29,7 @@ root_dir = "../"
 default_solution_dir = root_dir + "sample_data"
 default_prediction_dir = root_dir + "sample_result_submission"
 default_score_dir = root_dir + "scoring_output"
-default_data_name = "insect_challenge"
+default_data_name = "flower_challenge"
 
 # Debug flag 0: no debug, 1: show all scores, 2: also show version amd listing of dir
 debug_mode = 0
