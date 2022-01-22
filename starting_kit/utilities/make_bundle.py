@@ -374,7 +374,7 @@ class Bundle:
 	def get_data_name(self):
 		''' Get the name of the dataset.'''
 		
-		return 'insect_challenge' 
+		return 'PACHAMAMA_challenge' 
 
 #################################################
 # 					MAIN PROGRAM
