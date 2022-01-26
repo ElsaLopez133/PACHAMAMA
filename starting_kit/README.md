@@ -47,7 +47,7 @@ Install Anaconda Python 3.6.6
 
 (1) If you are a challenge participant:
 
-- The file README.ipynb contains step-by-step instructions on how to create a sample submission for the Bees and Wasps Image Classification challenge. 
+- The file README.ipynb contains step-by-step instructions on how to create a sample submission for the PACHAMAMA Image Classification challenge. 
 At the prompt type:
 jupyter-notebook README.ipynb
 
