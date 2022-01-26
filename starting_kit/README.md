@@ -1,10 +1,11 @@
 # Starting kit for Living specises Classification Challenge
 
+![plot](./overview_image.png)
 
-This challenge uses a Dataset introduced by  Maria-Elena Nilsback and Andrew Zissermanfor un the paper **Automated  flower  classification  over  a  largenumber  of  classes**,  
+This challenge uses a Dataset introduced by  Maria-Elena Nilsback and Andrew Zissermanfor un the paper **Automated  flower  classification  over  a  large number  of  classes**,  
  
  
-The dataset coniststs of total of 8,189 images belonging to 102 classes that  are  commonly  occuring  in  the  United  Kingdom. Some of the classes are the following:
+The dataset consists of a total of 8,189 images belonging to 102 classes that  are  commonly  occuring  in  the  United  Kingdom. Some of the classes are the following:
 
 1. Buttercup
 2. Fire lily
