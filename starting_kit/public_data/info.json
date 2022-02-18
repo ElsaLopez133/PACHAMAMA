@@ -8,5 +8,7 @@
     "has_super_categories": false,
     "image_column_name": "FILE_NAME",
     "category_column_name": "CATEGORY",
-    "csv_with_tab": false
+    "csv_with_tab": false,
+    "images_in_sub_folder": true,
+    "super_category_column_name": "SUPER_CATEGORY"
 }

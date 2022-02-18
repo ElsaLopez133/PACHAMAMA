@@ -71,7 +71,7 @@ max_samples = 50000
 
 # Save your model
 #################
-save_model = True
+save_model = False
 
 # I/O defaults
 ##############
