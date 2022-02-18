@@ -1,4 +1,4 @@
-# Starting kit for Living specises Classification Challenge
+# Starting kit for Living Species Classification Challenge
 
 ![plot](./overview_image.png)
 
@@ -18,16 +18,16 @@ This challenge is about creating and predicting a Machine Learning model and tra
 
 
 ### Phases
-This challenge conists of three phases:  
+This challenge consists of three phases:  
 
 1. `Phase 0`: 
-Public phase. We provide you with Dataset0 containing labeled data. You will not be evaluated on this dataset, but it will be used to developp the model that you will then submit for other 2 phases.
+Public phase. We provide you with Dataset0 containing labeled data. You will not be evaluated on this dataset, but it will be used to develop the model that you will then submit for other 2 phases.
 
 1. `Phase 1`
 Development phase. This time you do not have access to any part of the Dataset1 which will be used to train and test on the model you submitted. The performance of your LAST submission on the test set will be displayed on the leaderboard.
 
 2. `Phase 2`
-Final phase. This will follow the same procedure as phase 1 but with the Dataset2. And you will only have a single submissions to assess your final performance on the challenge.
+Final phase. This will follow the same procedure as phase 1 but with the Dataset2. And you will only have a single submission to assess your final performance on the challenge.
 Your performance on the test set will appear on the leaderboard when the organizers finish checking the submissions ensuring there is no cheating involved. 
     
     
@@ -50,7 +50,7 @@ Install Anaconda Python 3.6.6
 
 - The file README.ipynb contains step-by-step instructions on how to create a sample submission for the PACHAMAMA Image Classification challenge. 
 At the prompt type:
-jupyter-notebook README.ipynb
+`jupyter-notebook README.ipynb`
 
 - modify sample_code_submission to provide a better model or you can also write your own model in the jupyter notebook.
 
